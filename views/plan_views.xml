@@ -1,0 +1,35 @@
+<!-- views/plan_views.xml -->
+<odoo>
+    <record id="view_plan_tree" model="ir.ui.view">
+        <field name="name">plan.tree</field>
+        <field name="model">project.plan</field>
+        <field name="arch" type="xml">
+            <tree string="计划" edit="true">
+                <field name="name"/>
+                <field name="project_id"/>
+                <field name="department_id"/>
+                <field name="start_date"/>
+                <field name="end_date"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_plan_form" model="ir.ui.view">
+        <field name="name">plan.form</field>
+        <field name="model">project.plan</field>
+        <field name="arch" type="xml">
+            <form string="计划">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="project_id"/>
+                        <field name="department_id"/>
+                        <field name="start_date"/>
+                        <field name="end_date"/>
+                    </group>
+                    
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

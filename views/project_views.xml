@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+  <data>
+
+    <!-- ✅ 列表视图定义 -->
+    <record id="view_project_tree_inherit" model="ir.ui.view">
+      <field name="name">project.project.tree.inherit.dict</field>
+      <field name="model">project.project</field>
+      <field name="inherit_id" ref="project.view_project"/>
+      <field name="arch" type="xml">
+        <xpath expr="//tree" position="inside">
+          <field name="prj_num" string="项目编号"/>
+          <field name="project_type_id" string="项目分类"/>
+          <field name="project_status_id" string="项目状态"/>
+          <field name="construction_location" string="建设位置"/>
+          <field name="planned_start_date" string="开工时间"/>
+          <field name="planned_end_date" string="竣工时间"/>
+        </xpath>
+      </field>
+    </record>
+
+    <!-- ✅ 表单视图定义 -->
+    <record id="view_project_form_inherit_dict_fields" model="ir.ui.view">
+      <field name="name">project.project.form.inherit.dict</field>
+      <field name="model">project.project</field>
+      <field name="inherit_id" ref="project.edit_project"/>
+      <field name="arch" type="xml">
+        <xpath expr="//form/sheet/notebook" position="before">
+          <notebook>
+            <page string="基本信息">
+              <group string="核心信息">
+                <field name="prj_num"/>
+                <field name="name"/>
+                <field name="build_corp_name"/>
+                <field name="project_type_id"/>
+                <field name="project_status_id"/>
+              </group>
+              <group string="建设信息">
+                <field name="construction_location"/>
+                <field name="construction_content"/>
+                <field name="structure_type_id"/>
+                <field name="project_function_id"/>
+                <field name="construction_property_id"/>
+                <field name="annual_target"/>
+                <field name="project_level_id"/>
+                <field name="is_major_project"/>
+              </group>
+            </page>
+            <page string="计划与标段">
+              <group string="时间安排">
+                <field name="planned_start_date"/>
+                <field name="planned_end_date"/>
+              </group>
+              <group string="标段信息">
+                <field name="segment_num"/>
+                <field name="segment_name"/>
+                <field name="project_management_company_id"/>
+              </group>
+            </page>
+            <page string="招标与参与方">
+              <group string="招标信息">
+                <field name="tender_class_id"/>
+                <field name="tender_type_id"/>
+                <field name="contract_type_id"/>
+              </group>
+              <group string="参与单位角色">
+                <field name="corp_role_id"/>
+                <field name="superviser_role_id"/>
+                <field name="design_role_id"/>
+              </group>
+            </page>
+            <page string="专业与来源">
+              <group string="专业与等级">
+                <field name="specialty_id"/>
+                <field name="title_level_id"/>
+              </group>
+              <group string="数据来源">
+                <field name="data_source_id"/>
+              </group>
+            </page>
+          </notebook>
+        </xpath>
+      </field>
+    </record>
+
+  </data>
+</odoo>

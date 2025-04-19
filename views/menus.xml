@@ -1,0 +1,60 @@
+<odoo>
+    <data>
+        <!-- 继承系统的项目管理菜单 -->
+        <record id="menu_custom_project_management" model="ir.ui.menu">
+            <field name="name">工程项目管理</field>
+            <field name="parent_id" ref="project.menu_main_pm"/>
+            <field name="sequence" type="int">1</field>
+        </record>
+        <!-- 主菜单 -->
+        <menuitem id="menu_project_projects"
+                  name="项目管理"
+                  parent="menu_custom_project_management"
+                  sequence="10"/>
+        <menuitem id="menu_project_list"
+                  name="项目列表"
+                  parent="menu_project_projects"
+                  action="custom_action_project_project"
+                  sequence="20"/>
+        <menuitem id="menu_project_stages"
+                  name="项目阶段"
+                  parent="menu_project_projects"
+                  action="action_project_stage"
+                  sequence="10"/>
+        <menuitem id="menu_project_task_template"
+                  name="管理任务模板"
+                  parent="menu_project_projects"
+                  action="action_project_task_template"
+                  sequence="10"/>
+        <menuitem id="menu_project_create"
+              name="新增项目"
+              parent="menu_project_projects"
+              action="action_create_project"
+              sequence="30"/>
+
+        <menuitem id="menu_project_plan_management"
+              name="计划管理"
+              parent="menu_custom_project_management"
+              sequence="20"/>
+
+        <menuitem id="menu_project_plan"
+              name="计划列表"
+              parent="menu_project_plan_management"
+              action="action_plan_tree"
+              sequence="10"/>
+        <menuitem id="menu_plan_create"
+              name="新增计划"
+              parent="menu_project_plan_management"
+              action="action_create_plan"
+              sequence="20"/>
+        <!-- 继承系统菜单，添加批量创建项目阶段的菜单项 -->
+        <record id="menu_project_stage_batch_create" model="ir.ui.menu">
+            <field name="name">批量创建项目阶段</field>
+            <field name="parent_id" ref="project.menu_project_config"/>
+            <field name="action" ref="action_project_stage_batch_create"/>
+            <field name="sequence">10</field>
+            <field name="groups_id" eval="[(6, 0, [ref('base.group_user')])]"/>
+        </record>
+
+    </data>
+</odoo>

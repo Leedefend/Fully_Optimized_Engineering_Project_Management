@@ -1,0 +1,33 @@
+<odoo>
+    <data>
+        <!-- 报告模板 -->
+        <record id="action_report_project_plan" model="ir.actions.report">
+            <field name="name">project.plan.report</field>
+            <field name="model">project.plan</field>
+            <field name="report_type">qweb-pdf</field>
+            <field name="report_name">infrastructure_project_management.report_project_plan</field>
+            <field name="report_file">infrastructure_project_management.report_project_plan</field>
+            <field name="binding_model_id" ref="model_project_plan"/>
+        </record>
+
+        <!-- 报告 QWeb 模板 -->
+        <template id="report_project_plan">
+            <t t-call="web.html_container">
+                <t t-foreach="docs" t-as="o">
+                    <t t-set="doc" t-value="o"/>
+                    <t t-call="web.external_layout">
+                        <div class="page">
+                            <h2>Project Plan Report</h2>
+                            <p><strong>Plan Name:</strong> <t t-esc="doc.name"/></p >
+                            <p><strong>Project:</strong> <t t-esc="doc.project_id.name"/></p >
+                            <p><strong>Plan Type:</strong> <t t-esc="doc.plan_type"/></p >
+                            <p><strong>Start Date:</strong> <t t-esc="doc.start_date"/></p >
+                            <p><strong>End Date:</strong> <t t-esc="doc.end_date"/></p >
+                            <p><strong>Status:</strong> <t t-esc="doc.status"/></p >
+                        </div>
+                    </t>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

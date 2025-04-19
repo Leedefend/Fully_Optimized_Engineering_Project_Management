@@ -1,0 +1,22 @@
+<odoo>
+    <data>
+        <!-- 顶部主菜单 -->
+        <menuitem id="menu_coordination_office" name="协调办公" sequence="10"/>
+        <menuitem id="menu_project_management" name="项目管理" sequence="20"/>
+        <menuitem id="menu_task_monitoring" name="任务监控" sequence="30"/>
+
+        <!-- 协调办公子菜单 -->
+        <menuitem id="submenu_meeting_management" name="会议管理" parent="menu_coordination_office" sequence="10"/>
+        <menuitem id="submenu_approval_management" name="审批管理" parent="menu_coordination_office" sequence="20"/>
+
+        <!-- 项目管理子菜单 -->
+        <menuitem id="submenu_project_list" name="项目列表" parent="menu_project_management" sequence="10" action="action_project_list"/>
+        <menuitem id="submenu_project_plans" name="项目计划" parent="menu_project_management" sequence="20" action="action_project_plans"/>
+        <menuitem id="submenu_project_tasks" name="项目任务" parent="menu_project_management" sequence="30" action="action_project_tasks"/>
+        <menuitem id="submenu_project_stages" name="项目阶段" parent="menu_project_management" sequence="40" action="action_project_stages"/>
+
+        <!-- 任务监控子菜单 -->
+        <menuitem id="submenu_task_overview" name="任务概览" parent="menu_task_monitoring" sequence="10" action="action_task_overview"/>
+        <menuitem id="submenu_task_status" name="任务状态" parent="menu_task_monitoring" sequence="20" action="action_task_status"/>
+    </data>
+</odoo>

@@ -1,0 +1,209 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+  <data noupdate="1">
+    <record id="dic_project_type_a1" model="project.dictionary">
+      <field name="name">房建工程</field>
+      <field name="code">A1</field>
+      <field name="type">project_type</field>
+      <field name="active">1</field>
+    </record>
+    <record id="dic_project_type_a2" model="project.dictionary">
+      <field name="name">市政工程</field>
+      <field name="code">A2</field>
+      <field name="type">project_type</field>
+      <field name="active">1</field>
+    </record>
+    <record id="dic_project_type_a3" model="project.dictionary">
+      <field name="name">交通工程</field>
+      <field name="code">A3</field>
+      <field name="type">project_type</field>
+      <field name="active">1</field>
+    </record>
+    <record id="dic_project_property_b1" model="project.dictionary">
+      <field name="name">新建</field>
+      <field name="code">B1</field>
+      <field name="type">project_property</field>
+      <field name="active">1</field>
+    </record>
+    <record id="dic_project_property_b2" model="project.dictionary">
+      <field name="name">改扩建</field>
+      <field name="code">B2</field>
+      <field name="type">project_property</field>
+      <field name="active">1</field>
+    </record>
+    <record id="dic_project_function_c1" model="project.dictionary">
+      <field name="name">办公</field>
+      <field name="code">C1</field>
+      <field name="type">project_function</field>
+      <field name="active">1</field>
+    </record>
+    <record id="dic_project_function_c2" model="project.dictionary">
+      <field name="name">科研</field>
+      <field name="code">C2</field>
+      <field name="type">project_function</field>
+      <field name="active">1</field>
+    </record>
+    <record id="dic_project_function_c3" model="project.dictionary">
+      <field name="name">住宅</field>
+      <field name="code">C3</field>
+      <field name="type">project_function</field>
+      <field name="active">1</field>
+    </record>
+    <record id="dic_structure_type_d1" model="project.dictionary">
+      <field name="name">框架结构</field>
+      <field name="code">D1</field>
+      <field name="type">structure_type</field>
+      <field name="active">1</field>
+    </record>
+    <record id="dic_structure_type_d2" model="project.dictionary">
+      <field name="name">剪力墙结构</field>
+      <field name="code">D2</field>
+      <field name="type">structure_type</field>
+      <field name="active">1</field>
+    </record>
+    <record id="dic_contract_type_e1" model="project.dictionary">
+      <field name="name">施工合同</field>
+      <field name="code">E1</field>
+      <field name="type">contract_type</field>
+      <field name="active">1</field>
+    </record>
+    <record id="dic_contract_type_e2" model="project.dictionary">
+      <field name="name">设计合同</field>
+      <field name="code">E2</field>
+      <field name="type">contract_type</field>
+      <field name="active">1</field>
+    </record>
+    <record id="dic_tender_class_f1" model="project.dictionary">
+      <field name="name">公开招标</field>
+      <field name="code">F1</field>
+      <field name="type">tender_class</field>
+      <field name="active">1</field>
+    </record>
+    <record id="dic_tender_class_f2" model="project.dictionary">
+      <field name="name">邀请招标</field>
+      <field name="code">F2</field>
+      <field name="type">tender_class</field>
+      <field name="active">1</field>
+    </record>
+    <record id="dic_tender_type_g1" model="project.dictionary">
+      <field name="name">施工总承包</field>
+      <field name="code">G1</field>
+      <field name="type">tender_type</field>
+      <field name="active">1</field>
+    </record>
+    <record id="dic_tender_type_g2" model="project.dictionary">
+      <field name="name">专业分包</field>
+      <field name="code">G2</field>
+      <field name="type">tender_type</field>
+      <field name="active">1</field>
+    </record>
+    <record id="dic_superviser_role_h1" model="project.dictionary">
+      <field name="name">总监理工程师</field>
+      <field name="code">H1</field>
+      <field name="type">superviser_role</field>
+      <field name="active">1</field>
+    </record>
+    <record id="dic_superviser_role_h2" model="project.dictionary">
+      <field name="name">专业监理工程师</field>
+      <field name="code">H2</field>
+      <field name="type">superviser_role</field>
+      <field name="active">1</field>
+    </record>
+    <record id="dic_design_role_i1" model="project.dictionary">
+      <field name="name">勘察</field>
+      <field name="code">I1</field>
+      <field name="type">design_role</field>
+      <field name="active">1</field>
+    </record>
+    <record id="dic_design_role_i2" model="project.dictionary">
+      <field name="name">设计</field>
+      <field name="code">I2</field>
+      <field name="type">design_role</field>
+      <field name="active">1</field>
+    </record>
+    <record id="dic_corp_role_j1" model="project.dictionary">
+      <field name="name">建设单位</field>
+      <field name="code">J1</field>
+      <field name="type">corp_role</field>
+      <field name="active">1</field>
+    </record>
+    <record id="dic_corp_role_j2" model="project.dictionary">
+      <field name="name">施工单位</field>
+      <field name="code">J2</field>
+      <field name="type">corp_role</field>
+      <field name="active">1</field>
+    </record>
+    <record id="dic_corp_role_j3" model="project.dictionary">
+      <field name="name">监理单位</field>
+      <field name="code">J3</field>
+      <field name="type">corp_role</field>
+      <field name="active">1</field>
+    </record>
+    <record id="dic_specialty_k1" model="project.dictionary">
+      <field name="name">建筑工程</field>
+      <field name="code">K1</field>
+      <field name="type">specialty</field>
+      <field name="active">1</field>
+    </record>
+    <record id="dic_specialty_k2" model="project.dictionary">
+      <field name="name">给排水</field>
+      <field name="code">K2</field>
+      <field name="type">specialty</field>
+      <field name="active">1</field>
+    </record>
+    <record id="dic_specialty_k3" model="project.dictionary">
+      <field name="name">暖通</field>
+      <field name="code">K3</field>
+      <field name="type">specialty</field>
+      <field name="active">1</field>
+    </record>
+    <record id="dic_title_level_l1" model="project.dictionary">
+      <field name="name">高级</field>
+      <field name="code">L1</field>
+      <field name="type">title_level</field>
+      <field name="active">1</field>
+    </record>
+    <record id="dic_title_level_l2" model="project.dictionary">
+      <field name="name">中级</field>
+      <field name="code">L2</field>
+      <field name="type">title_level</field>
+      <field name="active">1</field>
+    </record>
+    <record id="dic_title_level_l3" model="project.dictionary">
+      <field name="name">初级</field>
+      <field name="code">L3</field>
+      <field name="type">title_level</field>
+      <field name="active">1</field>
+    </record>
+    <record id="dic_project_level_m1" model="project.dictionary">
+      <field name="name">国家级重点项目</field>
+      <field name="code">M1</field>
+      <field name="type">project_level</field>
+      <field name="active">1</field>
+    </record>
+    <record id="dic_project_level_m2" model="project.dictionary">
+      <field name="name">省级重点项目</field>
+      <field name="code">M2</field>
+      <field name="type">project_level</field>
+      <field name="active">1</field>
+    </record>
+    <record id="dic_data_source_n1" model="project.dictionary">
+      <field name="name">用户填报</field>
+      <field name="code">N1</field>
+      <field name="type">data_source</field>
+      <field name="active">1</field>
+    </record>
+    <record id="dic_data_source_n2" model="project.dictionary">
+      <field name="name">系统导入</field>
+      <field name="code">N2</field>
+      <field name="type">data_source</field>
+      <field name="active">1</field>
+    </record>
+    <record id="dic_data_source_n3" model="project.dictionary">
+      <field name="name">接口同步</field>
+      <field name="code">N3</field>
+      <field name="type">data_source</field>
+      <field name="active">1</field>
+    </record>
+  </data>
+</odoo>

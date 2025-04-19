@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_project_project,access_project_project,model_project_project,base.group_user,1,1,1,1
+access_plan,access.plan,model_project_plan,base.group_user,1,1,1,1
+access_project_stage_batch_create,access_project_stage_batch_create,model_project_stage_batch_create,base.group_system,1,1,1,1
+access_project_partner_user,access.project.partner.user,model_project_partner,,1,1,1,1
+access_project_stage_user,access.project.stage.user,model_project_project_stage,,1,1,1,1
+access_project_task_template_user,access.project.task.template.user,model_project_task_template,,1,1,1,1
+access_project_task_type_user,access.project.task.type.user,project.model_project_task_type,base.group_user,1,1,1,1
+access_project_dictionary,access.project.dictionary,model_project_dictionary,,1,1,1,1

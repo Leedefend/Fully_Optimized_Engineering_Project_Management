@@ -1,0 +1,15 @@
+id,name,description,stage_id:id,task_stage_id:id,sequence
+task_template_1,项目建议书及批复,,project_stage_1,,10
+task_template_2,建设任务通知书,,project_stage_1,,20
+task_template_3,可行性研究报告及批复,,project_stage_1,,30
+task_template_4,建设用地批准书,,project_stage_1,,40
+task_template_5,建设用地规划设计条件,,project_stage_1,,50
+task_template_6,规划红线图（批准图纸）,,project_stage_1,,60
+task_template_7,建设用地征地、拆迁文件,,project_stage_1,,70
+task_template_8,其他文件资料,,project_stage_1,,80
+task_template_9,建设工程规划许可证,,project_stage_1,,90
+task_template_10,固定资产投资项目节能审查,,project_stage_1,,100
+task_template_11,征地批复,,project_stage_1,,110
+task_template_12,拨款决定书,,project_stage_1,,120
+task_template_13,环境影响报告及批复,,project_stage_1,,130
+task_template_14,施工许可证,,project_stage_1,,140

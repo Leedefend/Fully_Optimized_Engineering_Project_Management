@@ -1,0 +1,13 @@
+<odoo>
+    <data noupdate="1">
+        <record id="project.model_project_project" model="ir.model">
+            <field name="model">project.project</field>
+        </record>
+        <record id="project.model_project_plan" model="ir.model">
+            <field name="model">project.plan</field>
+        </record>
+        <record id="project.model_project_task" model="ir.model">
+            <field name="model">project.task</field>
+        </record>
+    </data>
+</odoo>

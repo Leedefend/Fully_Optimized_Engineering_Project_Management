@@ -1,0 +1,21 @@
+<odoo>
+    <data>
+        <record id="view_project_stage_batch_create_form" model="ir.ui.view">
+            <field name="name">project.stage.batch.create.form</field>
+            <field name="model">project.stage.batch.create</field>
+            <field name="arch" type="xml">
+                <form string="批量创建项目阶段">
+                    <group>
+                        <field name="name"/>
+                        <field name="sequence"/>
+                        <field name="count"/>
+                    </group>
+                    <footer>
+                        <button string="创建" type="object" name="action_create_stages" class="oe_highlight"/>
+                        <button string="取消" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

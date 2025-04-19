@@ -1,0 +1,11 @@
+<!-- views/plan_menu.xml -->
+<odoo>
+    <menuitem id="menu_plan_management"
+              name="计划管理"
+              parent="menu_engineering_project_management"
+              sequence="10"/>
+    <menuitem id="menu_plans"
+              name="所有计划"
+              parent="menu_plan_management"
+              action="action_plan_tree"/>
+</odoo>

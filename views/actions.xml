@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <!-- 定义项目列表的动作 -->
+        <record id="custom_action_project_project" model="ir.actions.act_window">
+            <field name="name">项目列表</field>
+            <field name="res_model">project.project</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="project.view_project"/>
+        </record>
+
+        <!-- 新增项目动作 -->
+        <record id="action_create_project" model="ir.actions.act_window">
+            <field name="name">新增项目</field>
+            <field name="res_model">project.project</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="project.view_project"/>
+            <field name="target">current</field>
+        </record>
+
+        <!-- 定义计划列表的动作 -->
+        <record id="action_plan_tree" model="ir.actions.act_window">
+            <field name="name">计划列表</field>
+            <field name="res_model">project.plan</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_plan_tree"/>
+            <field name="target">current</field>
+        </record>
+         <!-- 定义管理任务模版的动作 -->
+        <record id="action_project_task_template" model="ir.actions.act_window">
+            <field name="name">任务模版</field>
+            <field name="res_model">project.task.template</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_task_template_tree"/>
+            <field name="target">current</field>
+        </record>
+
+        <!-- 新增计划动作 -->
+        <record id="action_create_plan" model="ir.actions.act_window">
+            <field name="name">新增计划</field>
+            <field name="res_model">project.plan</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_plan_form"/>
+            <field name="target">current</field>
+        </record>
+        <!-- 新增项目阶段动作 -->
+        <record id="action_project_stage" model="ir.actions.act_window">
+            <field name="name">Project Stages</field>
+            <field name="res_model">project.project.stage</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="view_project_stage_tree_inherit"/>
+            <field name="target">current</field>
+        </record>
+        <!-- 批量创建项目阶段动作 -->
+        <record id="action_project_stage_batch_create" model="ir.actions.act_window">
+            <field name="name">Batch Create Project Stages</field>
+            <field name="res_model">project.stage.batch.create</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+            <field name="groups_id" eval="[(6, 0, [ref('base.group_user')])]"/>
+        </record>
+    </data>
+</odoo>

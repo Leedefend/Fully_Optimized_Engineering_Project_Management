@@ -1,0 +1,18 @@
+<odoo>
+    <data>
+        <!-- 继承并修改成本表单视图 -->
+        <record id="view_cost_form_inherit" model="ir.ui.view">
+            <field name="name">project.cost.form.inherit</field>
+            <field name="model">project.cost</field>
+            <field name="inherit_id" ref="Engineering_Project_Management.view_cost_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form" position="inside">
+                    <field name="name" string="Name" t-translation="on"/>
+                    <field name="cost_type" string="Cost Type" t-translation="on"/>
+                    <field name="amount" string="Amount" t-translation="on"/>
+                    <field name="status" string="Status" t-translation="on"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

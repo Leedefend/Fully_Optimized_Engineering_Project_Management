@@ -1,0 +1,17 @@
+<odoo>
+    <data>
+        <!-- 继承并修改质量检查表单视图 -->
+        <record id="view_quality_form_inherit" model="ir.ui.view">
+            <field name="name">project.quality.form.inherit</field>
+            <field name="model">project.quality</field>
+            <field name="inherit_id" ref="Engineering_Project_Management.view_quality_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form" position="inside">
+                    <field name="name" string="Name" t-translation="on"/>
+                    <field name="issue_description" string="Issue Description" t-translation="on"/>
+                    <field name="status" string="Status" t-translation="on"/>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

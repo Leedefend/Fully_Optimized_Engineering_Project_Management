@@ -1,0 +1,89 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+  <data noupdate="1">
+    <record id="dic_type_project_type" model="project.dictionary">
+      <field name="name">项目分类</field>
+      <field name="code">PROJECT_TYPE</field>
+      <field name="type">project_type</field>
+      <field name="active">1</field>
+    </record>
+    <record id="dic_type_project_property" model="project.dictionary">
+      <field name="name">建设性质</field>
+      <field name="code">PROJECT_PROPERTY</field>
+      <field name="type">project_property</field>
+      <field name="active">1</field>
+    </record>
+    <record id="dic_type_project_function" model="project.dictionary">
+      <field name="name">工程用途</field>
+      <field name="code">PROJECT_FUNCTION</field>
+      <field name="type">project_function</field>
+      <field name="active">1</field>
+    </record>
+    <record id="dic_type_structure_type" model="project.dictionary">
+      <field name="name">结构体系</field>
+      <field name="code">STRUCTURE_TYPE</field>
+      <field name="type">structure_type</field>
+      <field name="active">1</field>
+    </record>
+    <record id="dic_type_contract_type" model="project.dictionary">
+      <field name="name">合同类型</field>
+      <field name="code">CONTRACT_TYPE</field>
+      <field name="type">contract_type</field>
+      <field name="active">1</field>
+    </record>
+    <record id="dic_type_tender_class" model="project.dictionary">
+      <field name="name">招标类型</field>
+      <field name="code">TENDER_CLASS</field>
+      <field name="type">tender_class</field>
+      <field name="active">1</field>
+    </record>
+    <record id="dic_type_tender_type" model="project.dictionary">
+      <field name="name">招标方式</field>
+      <field name="code">TENDER_TYPE</field>
+      <field name="type">tender_type</field>
+      <field name="active">1</field>
+    </record>
+    <record id="dic_type_superviser_role" model="project.dictionary">
+      <field name="name">监理角色</field>
+      <field name="code">SUPERVISER_ROLE</field>
+      <field name="type">superviser_role</field>
+      <field name="active">1</field>
+    </record>
+    <record id="dic_type_design_role" model="project.dictionary">
+      <field name="name">勘察设计角色</field>
+      <field name="code">DESIGN_ROLE</field>
+      <field name="type">design_role</field>
+      <field name="active">1</field>
+    </record>
+    <record id="dic_type_corp_role" model="project.dictionary">
+      <field name="name">企业角色</field>
+      <field name="code">CORP_ROLE</field>
+      <field name="type">corp_role</field>
+      <field name="active">1</field>
+    </record>
+    <record id="dic_type_specialty" model="project.dictionary">
+      <field name="name">专业名称</field>
+      <field name="code">SPECIALTY</field>
+      <field name="type">specialty</field>
+      <field name="active">1</field>
+    </record>
+    <record id="dic_type_title_level" model="project.dictionary">
+      <field name="name">职称等级</field>
+      <field name="code">TITLE_LEVEL</field>
+      <field name="type">title_level</field>
+      <field name="active">1</field>
+    </record>
+    <record id="dic_type_project_level" model="project.dictionary">
+      <field name="name">工程等级</field>
+      <field name="code">PROJECT_LEVEL</field>
+      <field name="type">project_level</field>
+      <field name="active">1</field>
+    </record>
+    <record id="dic_type_data_source" model="project.dictionary">
+      <field name="name">数据来源</field>
+      <field name="code">DATA_SOURCE</field>
+      <field name="type">data_source</field>
+      <field name="active">1</field>
+    </record>
+  </data>
+</odoo>

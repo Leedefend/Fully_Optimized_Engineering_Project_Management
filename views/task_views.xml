@@ -1,0 +1,38 @@
+<odoo>
+    <data>
+        <!-- 项目任务树视图 -->
+        <record id="view_Engineering_project_task_tree" model="ir.ui.view">
+            <field name="name">project.task.tree</field>
+            <field name="model">project.task</field>
+            <field name="arch" type="xml">
+                <tree string="项目任务">
+                    <field name="name" string="任务名称"/>
+                    <field name="project_id" string="项目"/>
+                    <field name="subproject_id" string="子项目"/>
+                    <field name="project_type_id" string="项目类型"/>
+                    <field name="quality_issues" string="质量问题"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- 项目任务表单视图 -->
+        <record id="view_Engineering_project_task_form" model="ir.ui.view">
+            <field name="name">project.task.form</field>
+            <field name="model">project.task</field>
+            <field name="arch" type="xml">
+                <form string="项目任务">
+                    <sheet>
+                        <group>
+                            <field name="name" string="任务名称"/>
+                            <field name="project_id" string="项目"/>
+                            <field name="subproject_id" string="子项目"/>
+                            <field name="project_type_id" string="项目类型"/>
+                            <field name="quality_issues" string="质量问题"/>
+                            <field name="attachment_ids" widget="many2many_binary" string="附件"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

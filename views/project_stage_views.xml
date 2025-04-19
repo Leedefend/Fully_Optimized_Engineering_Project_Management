@@ -1,0 +1,29 @@
+<odoo>
+    <data>
+        <!-- 项目阶段的树视图 -->
+        <record id="view_project_stage_tree_inherit" model="ir.ui.view">
+            <field name="name">project.stage.tree.inherit</field>
+            <field name="model">project.project.stage</field>
+            <field name="inherit_id" ref="project.project_project_stage_view_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//tree/field[@name='name']" position="after">
+                    <field name="task_ids" string="任务名称"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- 项目阶段的表单视图 -->
+        <record id="view_project_stage_form_inherit" model="ir.ui.view">
+            <field name="name">project.stage.form.inherit</field>
+            <field name="model">project.project.stage</field>
+            <field name="inherit_id" ref="project.project_project_stage_view_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form/sheet/group" position="inside">
+                    <group>
+                        <field name="mail_template_id" context="{'default_model': 'project.project'}"/>
+                    </group>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>
