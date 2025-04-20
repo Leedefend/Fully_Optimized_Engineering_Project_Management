@@ -1,12 +1,29 @@
-*.pyc
+# Odoo Python 编译临时文件
 __pycache__/
-*.log
-*.swp
-*.bak
-*.db
+*.py[cod]
+*.pyo
+*.pyd
+
+# 编辑器配置
 .idea/
 .vscode/
-*.egg-info/
+
+# 系统文件
 .DS_Store
+Thumbs.db
+
+# 环境文件
 .env
+.venv/
+*.log
+
+# Odoo 自动生成文件
 *.zip
+*.pot
+*.mo
+*.pdf
+*.docx
+*.xls
+
+# Git 忽略文件自己
+.gitignore

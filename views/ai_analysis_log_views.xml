@@ -1,35 +1,94 @@
-
 <odoo>
-    <record id="view_ai_analysis_log_tree" model="ir.ui.view">
-        <field name="name">ai.analysis.log.tree</field>
-        <field name="model">ai.analysis.log</field>
-        <field name="arch" type="xml">
+  <!-- ✅ 动作窗口：AI 分析记录 -->
+  <record id="action_ai_analysis_log" model="ir.actions.act_window">
+    <field name="name">AI 分析记录</field>
+    <field name="res_model">ai.analysis.log</field>
+    <field name="view_mode">tree,form</field>
+    <field name="target">current</field>
+    <field name="domain">[('project_id', '=', context.get('active_id'))]</field>
+  </record>
+
+  <!-- ✅ AI 分析记录 Tree 视图 -->
+  <record id="view_ai_analysis_log_tree" model="ir.ui.view">
+    <field name="name">ai.analysis.log.tree</field>
+    <field name="model">ai.analysis.log</field>
+    <field name="arch" type="xml">
+      <tree>
+        <field name="project_id"/>
+        <field name="analyzed_at"/>
+        <field name="analyzed_by"/>
+        <field name="ai_plan_brief"/>
+        <field name="ai_invest_hint"/>
+        <field name="ai_risk_summary"/>
+      </tree>
+    </field>
+  </record>
+
+  <!-- ✅ AI 分析记录 Form 视图 -->
+  <record id="view_ai_analysis_log_form" model="ir.ui.view">
+    <field name="name">ai.analysis.log.form</field>
+    <field name="model">ai.analysis.log</field>
+    <field name="arch" type="xml">
+      <form string="AI 分析记录">
+        <sheet>
+          <group>
+            <field name="project_id"/>
+            <field name="analyzed_by"/>
+            <field name="analyzed_at"/>
+          </group>
+          <group string="分析结果">
+            <field name="ai_plan_brief"/>
+            <field name="ai_invest_hint"/>
+            <field name="ai_risk_summary"/>
+            <field name="ai_doc_recommend"/>
+          </group>
+        </sheet>
+      </form>
+    </field>
+  </record>
+
+  <!-- ✅ 添加到 project.project 的 One2many 视图页签 -->
+  <record id="view_project_form_with_ai_analysis_log" model="ir.ui.view">
+    <field name="name">project.project.form.inherit.ai.analysis</field>
+    <field name="model">project.project</field>
+    <field name="inherit_id" ref="project.edit_project"/>
+    <field name="arch" type="xml">
+      <xpath expr="//notebook" position="inside">
+        <page string="AI 分析记录">
+          <field name="ai_analysis_ids">
             <tree>
-                <field name="analyzed_at"/>
-                <field name="analyzed_by"/>
-                <field name="ai_plan_brief"/>
-                <field name="ai_invest_hint"/>
-                <field name="ai_risk_summary"/>
-                <field name="ai_doc_recommend"/>
+              <field name="analyzed_at"/>
+              <field name="analyzed_by"/>
+              <field name="ai_plan_brief"/>
+              <field name="ai_invest_hint"/>
+              <field name="ai_risk_summary"/>
+              <field name="ai_doc_recommend"/>
             </tree>
-        </field>
-    </record>
+          </field>
+        </page>
+      </xpath>
+    </field>
+  </record>
 
-    <record id="action_ai_analysis_log" model="ir.actions.act_window">
-        <field name="name">AI分析记录</field>
-        <field name="res_model">ai.analysis.log</field>
-        <field name="view_mode">tree</field>
-        <field name="context">{}</field>
-        <field name="domain">[('project_id','=',active_id)]</field>
-        <field name="target">current</field>
-    </record>
+  <!-- ✅ 添加按钮触发 AI 分析 -->
+  <record id="view_project_form_ai_button" model="ir.ui.view">
+    <field name="name">project.project.form.inherit.ai.button</field>
+    <field name="model">project.project</field>
+    <field name="inherit_id" ref="project.edit_project"/>
+    <field name="arch" type="xml">
+      <xpath expr="//header" position="inside">
+        <button name="action_generate_ai_analysis"
+                string="AI 分析"
+                type="object"
+                class="oe_highlight"/>
+      </xpath>
+    </field>
+  </record>
 
-    <act_window id="action_open_ai_log_from_project"
-                name="AI分析记录"
-                res_model="ai.analysis.log"
-                view_mode="tree"
-                domain="[('project_id','=',active_id)]"
-                context="{}"
-                binding_model="project.project"
-                target="current"/>
+  <!-- ✅ 菜单：AI 分析记录 -->
+  <menuitem id="menu_ai_analysis_log"
+            name="AI 分析记录"
+            parent="menu_project_dictionary_root"
+            action="action_ai_analysis_log"
+            sequence="20"/>
 </odoo>

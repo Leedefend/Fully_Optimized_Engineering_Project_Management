@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='utf-8'?>
+<?xml version="1.0" encoding="utf-8"?>
 <odoo>
   <data>
 
@@ -10,8 +10,14 @@
       <field name="arch" type="xml">
         <xpath expr="//tree" position="inside">
           <field name="prj_num" string="项目编号"/>
-          <field name="project_type_id" string="项目分类"/>
-          <field name="project_status_id" string="项目状态"/>
+          <field name="project_type_id"
+                 string="项目分类"
+                 domain="[('type_id.code','=','project_type'), ('active','=',True)]"
+                 options="{'no_create': False, 'no_create_edit': False}"/>
+          <field name="project_status_id"
+                 string="项目状态"
+                 domain="[('type_id.code','=','project_status'), ('active','=',True)]"
+                 options="{'no_create': False, 'no_create_edit': False}"/>
           <field name="construction_location" string="建设位置"/>
           <field name="planned_start_date" string="开工时间"/>
           <field name="planned_end_date" string="竣工时间"/>
@@ -32,20 +38,33 @@
                 <field name="prj_num"/>
                 <field name="name"/>
                 <field name="build_corp_name"/>
-                <field name="project_type_id"/>
-                <field name="project_status_id"/>
+                <field name="project_type_id"
+                       domain="[('type_id.code','=','project_type'), ('active','=',True)]"
+                       options="{'no_create': False, 'no_create_edit': False}"/>
+                <field name="project_status_id"
+                       domain="[('type_id.code','=','project_status'), ('active','=',True)]"
+                       options="{'no_create': False, 'no_create_edit': False}"/>
               </group>
               <group string="建设信息">
                 <field name="construction_location"/>
                 <field name="construction_content"/>
-                <field name="structure_type_id"/>
-                <field name="project_function_id"/>
-                <field name="construction_property_id"/>
+                <field name="structure_type_id"
+                       domain="[('type_id.code','=','structure_type'), ('active','=',True)]"
+                       options="{'no_create': False, 'no_create_edit': False}"/>
+                <field name="project_function_id"
+                       domain="[('type_id.code','=','project_function'), ('active','=',True)]"
+                       options="{'no_create': False, 'no_create_edit': False}"/>
+                <field name="construction_property_id"
+                       domain="[('type_id.code','=','project_property'), ('active','=',True)]"
+                       options="{'no_create': False, 'no_create_edit': False}"/>
                 <field name="annual_target"/>
-                <field name="project_level_id"/>
+                <field name="project_level_id"
+                       domain="[('type_id.code','=','project_level'), ('active','=',True)]"
+                       options="{'no_create': False, 'no_create_edit': False}"/>
                 <field name="is_major_project"/>
               </group>
             </page>
+
             <page string="计划与标段">
               <group string="时间安排">
                 <field name="planned_start_date"/>
@@ -57,25 +76,45 @@
                 <field name="project_management_company_id"/>
               </group>
             </page>
+
             <page string="招标与参与方">
               <group string="招标信息">
-                <field name="tender_class_id"/>
-                <field name="tender_type_id"/>
-                <field name="contract_type_id"/>
+                <field name="tender_class_id"
+                       domain="[('type_id.code','=','tender_class'), ('active','=',True)]"
+                       options="{'no_create': False, 'no_create_edit': False}"/>
+                <field name="tender_type_id"
+                       domain="[('type_id.code','=','tender_type'), ('active','=',True)]"
+                       options="{'no_create': False, 'no_create_edit': False}"/>
+                <field name="contract_type_id"
+                       domain="[('type_id.code','=','contract_type'), ('active','=',True)]"
+                       options="{'no_create': False, 'no_create_edit': False}"/>
               </group>
               <group string="参与单位角色">
-                <field name="corp_role_id"/>
-                <field name="superviser_role_id"/>
-                <field name="design_role_id"/>
+                <field name="corp_role_id"
+                       domain="[('type_id.code','=','corp_role'), ('active','=',True)]"
+                       options="{'no_create': False, 'no_create_edit': False}"/>
+                <field name="superviser_role_id"
+                       domain="[('type_id.code','=','superviser_role'), ('active','=',True)]"
+                       options="{'no_create': False, 'no_create_edit': False}"/>
+                <field name="design_role_id"
+                       domain="[('type_id.code','=','design_role'), ('active','=',True)]"
+                       options="{'no_create': False, 'no_create_edit': False}"/>
               </group>
             </page>
+
             <page string="专业与来源">
               <group string="专业与等级">
-                <field name="specialty_id"/>
-                <field name="title_level_id"/>
+                <field name="specialty_id"
+                       domain="[('type_id.code','=','specialty'), ('active','=',True)]"
+                       options="{'no_create': False, 'no_create_edit': False}"/>
+                <field name="title_level_id"
+                       domain="[('type_id.code','=','title_level'), ('active','=',True)]"
+                       options="{'no_create': False, 'no_create_edit': False}"/>
               </group>
               <group string="数据来源">
-                <field name="data_source_id"/>
+                <field name="data_source_id"
+                       domain="[('type_id.code','=','data_source'), ('active','=',True)]"
+                       options="{'no_create': False, 'no_create_edit': False}"/>
               </group>
             </page>
           </notebook>

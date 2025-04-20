@@ -21,6 +21,8 @@
         'views/dictionary_views.xml',
         'data/project_stage_data.xml',
         'data/project_task_template_data.xml',
+        'views/project_dictionary_fields_views.xml',
+        'views/ai_analysis_log_views.xml',
 
     ],
     'installable': True,
