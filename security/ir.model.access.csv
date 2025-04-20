@@ -7,3 +7,4 @@ access_project_stage_user,access.project.stage.user,model_project_project_stage,
 access_project_task_template_user,access.project.task.template.user,model_project_task_template,,1,1,1,1
 access_project_task_type_user,access.project.task.type.user,project.model_project_task_type,base.group_user,1,1,1,1
 access_project_dictionary,access.project.dictionary,model_project_dictionary,,1,1,1,1
+access_project_dictionary_type,access_project_dictionary_type,model_project_dictionary_type,base.group_user,1,1,1,1

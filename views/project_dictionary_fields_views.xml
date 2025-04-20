@@ -1,13 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
 <odoo>
-  <!-- 数据字典动作 -->
   <record id="action_project_dictionary" model="ir.actions.act_window">
     <field name="name">数据字典</field>
     <field name="res_model">project.dictionary</field>
     <field name="view_mode">tree,form</field>
   </record>
 
-  <!-- 数据字典 Tree 视图 -->
+  <!-- 数据字典Tree视图 -->
   <record id="view_project_dictionary_tree" model="ir.ui.view">
     <field name="name">project.dictionary.tree</field>
     <field name="model">project.dictionary</field>
@@ -21,7 +19,7 @@
     </field>
   </record>
 
-  <!-- 数据字典 Form 视图 -->
+  <!-- 数据字典Form视图 -->
   <record id="view_project_dictionary_form" model="ir.ui.view">
     <field name="name">project.dictionary.form</field>
     <field name="model">project.dictionary</field>
@@ -31,7 +29,7 @@
           <group>
             <field name="name"/>
             <field name="code"/>
-            <field name="type_id" options="{'no_create': False, 'no_create_edit': False}"/>
+            <field name="type_id" domain="[('active','=',True)]" options="{'no_create': False, 'no_create_edit': False}"/>
             <field name="active"/>
           </group>
         </sheet>
@@ -39,16 +37,14 @@
     </field>
   </record>
 
-  <!-- 一级菜单：基础数据 -->
+  <!-- 数据字典菜单 -->
   <menuitem id="menu_project_dictionary_root"
             name="基础数据"
             parent="project.menu_main_pm"
             sequence="100"/>
 
-  <!-- 二级菜单：数据字典 -->
   <menuitem id="menu_project_dictionary"
             name="数据字典"
             parent="menu_project_dictionary_root"
             action="action_project_dictionary"/>
-
 </odoo>
